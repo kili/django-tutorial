@@ -1,0 +1,5 @@
+test:
+  override:
+    - export CODECOV_TOKEN=71e044b4-90b8-40ad-8cde-5c8c7b729ddd
+    - coverage run manage.py test --settings="mysite.settings" && bash <(curl -s https://codecov.io/bash)
+    - coverage report -m
